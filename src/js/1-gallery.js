@@ -1,7 +1,5 @@
-// Описаний в документації
-
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
+
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
@@ -71,7 +69,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-console.log(gallery);
+
 const galleryListContent = images
   .map(
     ({ original, preview, description }) => `<li class="gallery-item">
@@ -86,27 +84,7 @@ const galleryListContent = images
 </li>
 `
   )
-  .join();
+  .join('');
 
 gallery.insertAdjacentHTML('afterbegin', galleryListContent);
-
-// var gallery = $('.gallery a').simpleLightbox();
-
-// gallery.next(); // Next Image
-
-// gallery.addEventListener('click', handelClickGallery);
-
-// function handelClickGallery(event) {
-//   event.preventDefault();
-//   if (event.target.nodeName !== 'IMG') {
-//     return;
-//   }
-//   const imageLink = event.target.dataset.source;
-//   const imageDescription = event.target.alt;
-
-//   basicLightbox
-//     .create(
-//       `<img src="${imageLink}" alt=${imageDescription} width="1400" height="900" >`
-//     )
-//     .show();
-// }
+new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });

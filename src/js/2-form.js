@@ -2,13 +2,13 @@ const formData = { email: '', message: '' };
 
 const form = document.querySelector('.feedback-form');
 
-form.addEventListener('input', getInputData);
+form.addEventListener('input', saveInputDataToLS);
 window.addEventListener('DOMContentLoaded', onReloadGetLSData);
 form.addEventListener('submit', validateOnSubmitBtn);
 
-function getInputData() {
-  formData.email = form.elements.email.value;
-  formData.message = form.elements.message.value;
+function saveInputDataToLS() {
+  formData.email = form.elements.email.value.trim();
+  formData.message = form.elements.message.value.trim();
   const jsonFormData = JSON.stringify(formData);
   localStorage.setItem('feedback-form-state', jsonFormData);
 }

@@ -20,10 +20,11 @@ function onReloadGetLSData() {
   }
   try {
     const dataFromLS = JSON.parse(jsonDataFromLS);
-    form.elements.email.value = dataFromLS.email;
-    form.elements.message.value = dataFromLS.message;
-    formData.email = dataFromLS.email;
-    formData.message = dataFromLS.message;
+    const { email, message } = dataFromLS;
+    form.elements.email.value = email;
+    form.elements.message.value = message;
+    formData.email = email;
+    formData.message = message;
   } catch (error) {
     console.error('Error parsing JSON from localStorage:', error);
   }

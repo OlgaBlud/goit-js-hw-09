@@ -1,11 +1,5 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  /* font-size: 16px;
-  line-height: 24px;
-  font-weight: 400; */
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Reset styles */
@@ -44,15 +38,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* gallery */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1340px;
-}
+
 .page-title {
   margin-bottom: 15px;
 }
@@ -73,4 +59,62 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+/* gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1340px;
+}
+/* form */
+.feedback-form {
+  width: 408px;
+  padding: 24px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+input,
+textarea {
+  margin-top: 8px;
+  padding: 8px;
+  font-family: inherit;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+}
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+button:hover,
+button:focus {
+  background: #6c8cff;
 }
